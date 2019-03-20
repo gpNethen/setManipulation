@@ -1,0 +1,74 @@
+
+
+
+Nathan Reichert
+
+Saint Cloud State University
+
+CSCI 301
+
+Project 2
+
+Set Manipulator
+
+Due:  10 September, 2015
+
+
+
+
+Nathan Reichert
+cs301106
+Section 1
+Project 2-Set Class
+Due 10 September, 2015
+
+Design Document
+
+Intro:
+      To begin, this program was created to manipulate sets of a certain item type. The item type used to demonstrate the manipulation is the integer type. Sets are a collection of data, in this case a collection of integers, in which a unique piece of data occurs only one time. This particular program is written to output a menu for the user to interact with, and is driven by commands received from the user in relation to the menu that appears.  The program will only acknowledge commands listed in the menu, and will then perform a variety of manipulations on a collection of 3 separate sets.
+Data Structures:
+	This program uses a Set ADT structure much like the Bag ADT. In fact, the Bag was used as a sort of guideline for the design of the Set.  The difference between the Bag and the Set is the Bag can have multiple instances of a specific value, where a Set is restricted to one instance per value.  In the main program, arrays are also used to hold a collection of Set data types, and the Sets themselves are essentially arrays of the item type defined in the class. In this specific case, the Sets are integer arrays.
+Functions:
+	The class and main program use a variety of defined functions designed to carry out insertions of data types, removal of data types, and return number of items in a set. The assert function is also used in specific areas of the class as a safeguard against invalid situations relating to the Set class.
+Main Program:
+	The main program first displays a menu of commands and the respective action that each command performs. After the user inputs the proper command, the main program utilizes the functions of the Set class to carry out the instructions for the specific command and will then await another command. This process will repeat as necessary until the user enters the command to quit the main program.
+
+
+Nathan Reichert
+cs301106
+Section 1
+Project 2-Set Class
+Due 10 September, 2015
+
+User Document
+
+	The program begins with the display of the menu for the user to interact with and will only recognize commands listed in that menu. If a user enters in a command other than those that appear on the menu, the program will simply await a valid input. A user will be able to use these menu commands to manipulate 3 different instances of a Set. Inserting and removing data to a set, forming the union of two sets into a destination set, writing the contents of a set, checking if a value is present in a set, displaying the menu, and quitting are all valid operations of this program.
+
+To compile the program in the CSCI2 unix terminal, enter:  g++ set_main.cpp
+To run the program, after compiling, in the unix terminal, enter: a.out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nathan Reichert
+cs301106
+Section 1
+Project 2-Set Class
+Due 10 September, 2015
+
+	In summation, this program utilized an abstract data type based largely upon the examples of the Bag ADT, with many custom functions to achieve the actions necessary for manipulating data members as well as simple assertions and input/output manipulation for formatting of output. All of these were key to the fruition of the project.
+
+	One issue noted that I discovered too late is that when forming the union of two Sets, if two separate sets contain the same data element (for example, two sets both containing the integer 42), the destination Set will have two instances of that data element thus, becoming a multiset and failing. I learned that no matter how much you think you have solved a complete problem, extensive testing is necessary to be sure you have an iron-clad program that has no instances of failure.
+
+	A question proposed how an intersection function might work. One possible solution would be to run a function that checks one Set for the occurrences of its data elements against a second Set, and any time it returns a value greater than zero, it would add that specific index to a third Set, thus forming a final Set containing the intersection of the first two Sets.
+
